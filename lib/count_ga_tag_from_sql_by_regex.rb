@@ -7,11 +7,8 @@ ONCLICK_REGEX = /onclick=\\\"ga/.freeze
 # GA_TAG_REGEX = /onclick=\\\"ga(.*)\\\"/.freeze
 GA_TAG_REGEX = /onclick=\\\"ga(.*)/.freeze
 
-GA_TAG_REGEX_HONBAN = /onclick=\\\"ga([a-zA-Z0-9ぁ-んーァ-ヶーｱ-ﾝﾞﾟ一-龠!"#$%&'()*+-.,\/:;<=>?@\[\]^_`{|}\\~ 　]{0,100})\\\"/.freeze
-
-
-matched_text_by_onclick_regex = File.new('../count_result/matched_text_onclick_regex.txt', "w")
-matched_text_by_ga_tag_regex_honban = File.new('../count_result/matched_text_by_ga_tag_regex_honban.txt', "w")
+GA_TAG_REGEX_HONBAN_20221005v1 = /onclick=\\\"ga([a-zA-Z0-9ぁ-んーァ-ヶーｱ-ﾝﾞﾟ一-龠!"#$%&'()*+-.,\/:;<=>?@\[\]^_`{|}\\~ 　]{0,150})\\\"/.freeze
+GA_TAG_REGEX_HONBAN_20221005v2 = /onclick=\\\"ga(.{0,150})\\\"/.freeze
 
 start_time = Time.now
 
