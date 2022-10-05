@@ -6,7 +6,7 @@ require 'byebug'
 # gaタグの中身の文字数が100文字以上ある場合、置換できなくなる。
 # もし、文字数上限なくすと、gsub!でマッチしないgaタグが存在するため、上限を設定している。
 # この上限は、もう少し上げてもいいかもしれない。
-GA_TAG_REGEX = /onclick=\\\"ga([a-zA-Z0-9ぁ-んーァ-ヶーｱ-ﾝﾞﾟ一-龠!"#$%&'()*+-.,\/:;<=>?@\[\]^_`{|}\\~ 　]{0,100})\\\"/.freeze
+GA_TAG_REGEX = /onclick=\\\"ga(.{0,150})\\\"/.freeze
 
 require 'fileutils'
 start_time = Time.now
