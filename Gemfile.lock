@@ -7,8 +7,17 @@ GEM
     io-console (0.5.11)
     irb (1.4.2)
       reline (>= 0.3.0)
+    language_server-protocol (3.17.0.1)
+    prettier_print (0.1.0)
     reline (0.3.1)
       io-console (~> 0.5)
+    ruby-lsp (0.3.3)
+      language_server-protocol (~> 3.17.0)
+      sorbet-runtime
+      syntax_tree (>= 3.4)
+    sorbet-runtime (0.5.10482)
+    syntax_tree (3.6.3)
+      prettier_print
 
 PLATFORMS
   arm64-darwin-21
@@ -16,6 +25,7 @@ PLATFORMS
 
 DEPENDENCIES
   debug
+  ruby-lsp
 
 BUNDLED WITH
    2.3.7
