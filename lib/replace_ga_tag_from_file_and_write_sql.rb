@@ -2,13 +2,13 @@
 
 # 外部ファイルから読み込み、GA タグを全て置換するコード
 require 'byebug'
+require 'fileutils'
 
-# gaタグの中身の文字数が100文字以上ある場合、置換できなくなる。
+# gaタグの中身の文字数が150文字以上ある場合、置換できなくなる。
 # もし、文字数上限なくすと、gsub!でマッチしないgaタグが存在するため、上限を設定している。
 # この上限は、もう少し上げてもいいかもしれない。
 GA_TAG_REGEX = /onclick=\\\"ga(.{0,150})\\\"/.freeze
 
-require 'fileutils'
 start_time = Time.now
 
 # 本番では、SQLファイルを読み込む。
